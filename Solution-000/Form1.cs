@@ -38,6 +38,9 @@ namespace Solution_000
                     MessageBox.Show("Errro" + ex.Message);
                 }
             }
+        }
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
             using (MySqlConnection conexion = new MySqlConnection())
             {
                 listView1.Items.Clear();
@@ -45,7 +48,7 @@ namespace Solution_000
                 {
                     conexion.Open();
                     string consulta = "SELECT * FROM Contactos";
-                    MySqlCommand cmd = new MySqlCommand(consulta,conexion); // creamos un obejto para hacer las consultas 
+                    MySqlCommand cmd = new MySqlCommand(consulta, conexion); // creamos un obejto para hacer las consultas 
                     MySqlDataReader raeeder = cmd.ExecuteReader(); // crea la conexion y manda este objeto ala base de datos  ara este crear la consulta
                     // selecionar los datos y pasarlo por el el Metodo ExecuteReader();
 
@@ -61,25 +64,30 @@ namespace Solution_000
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show ("Error" + ex.Message);
+                    MessageBox.Show("Error" + ex.Message);
                 }
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
             using (MySqlConnection conexion = new MySqlConnection())
             {
-                if (listView1.SelectedItems.Count == 0)
-                {
-                    MessageBox.Show("Por favor selecione un producto para eliminar ");
-                    return;
-                }
-                string id = listView1.SelectedItems[0].Text;
                 try
                 {
+                    if (listView1.SelectedItems.Count == 0) // selecionamos los items y que este no sea igaul a cero 
+                    {
+                        MessageBox.Show("Por favor selecione un producto para eliminar "); // mostramos mensaje al usuario 
+                        return;
+                    }
+                    string id = listView1.SelectedItems[0].Text;
+
                     conexion.Open(); // abrimos la conexion 
                     string consulta = "DELETE FROM  Contactos WHERE ID = @ID "; // creamos la consulta 
                     MySqlCommand cmd = new MySqlCommand(consulta, conexion);
                     cmd.Parameters.AddWithValue("@ID", id);
                     int filasAfectadas = cmd.ExecuteNonQuery();
-                    if (filasAfectadas <0)
+                    if (filasAfectadas < 0)
                     {
                         MessageBox.Show(" Contacto selecionado y eliminado perfectamente ");
                         listView1.Items.Remove(listView1.SelectedItems[0]);
@@ -89,11 +97,10 @@ namespace Solution_000
                         MessageBox.Show("No se encontro el contatco para eliminar ");
                     }
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     MessageBox.Show("error " + ex);
                 }
-               
             }
         }
     }
