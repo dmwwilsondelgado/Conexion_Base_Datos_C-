@@ -52,12 +52,16 @@ namespace Solution_000
                     // usamos un while
                     while (raeeder.Read()) // Read es Leer reader lo que capturamos del metodo los datos y mandarlos a esta lista si se cumple 
                     {
-
+                        ListViewItem item = new ListViewItem(raeeder["ID"].ToString()); // treamos el metodo y parseamos el ID 
+                        item.SubItems.Add(raeeder["Nombre"].ToString()); // agregamos  los datos reader que traemos de la consulta y lo mandamos al elemenot item mediante objeto hacia las listview
+                        item.SubItems.Add(raeeder["Telefono"].ToString()); // agregamos  los datos reader que traemos de la consulta y lo mandamos al elemenot item mediante objeto hacia las listview
+                        listView1.Items.Add(item); // agregamos los items   a a list view que por deafault la madamso asi                    
                     }
+                    raeeder.Close(); // cerramos la consulta 
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show ("Error" + ex.Message);
                 }
             }
         }
