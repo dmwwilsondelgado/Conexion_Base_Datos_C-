@@ -29,52 +29,115 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtNombre = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtTelefono = new TextBox();
+            btnGuardar = new Button();
+            btnMostrar = new Button();
+            btnEliminar = new Button();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 46);
+            label1.Location = new Point(114, 82);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Nombre";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(145, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            txtNombre.Location = new Point(227, 82);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(100, 23);
+            txtNombre.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 98);
+            label2.Location = new Point(114, 134);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "Telefono";
             // 
-            // textBox2
+            // txtTelefono
             // 
-            textBox2.Location = new Point(145, 98);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            txtTelefono.Location = new Point(227, 134);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(100, 23);
+            txtTelefono.TabIndex = 3;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(71, 213);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 4;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnMostrar
+            // 
+            btnMostrar.Location = new Point(167, 212);
+            btnMostrar.Name = "btnMostrar";
+            btnMostrar.Size = new Size(75, 23);
+            btnMostrar.TabIndex = 5;
+            btnMostrar.Text = "Mostrar";
+            btnMostrar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Location = new Point(291, 213);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(75, 23);
+            btnEliminar.TabIndex = 6;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            listView1.Location = new Point(441, 82);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(214, 189);
+            listView1.TabIndex = 7;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Nombre";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Telefono";
+            columnHeader3.Width = 90;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
+            Controls.Add(listView1);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnMostrar);
+            Controls.Add(btnGuardar);
+            Controls.Add(txtTelefono);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombre);
             Controls.Add(label1);
+            Font = new Font("Segoe UI Historic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -84,8 +147,15 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtTelefono;
+        private Button btnGuardar;
+        private Button btnMostrar;
+        private Button btnEliminar;
+        private ListView listView1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
     }
 }
