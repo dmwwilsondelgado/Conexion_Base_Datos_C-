@@ -64,6 +64,37 @@ namespace Solution_000
                     MessageBox.Show ("Error" + ex.Message);
                 }
             }
+            using (MySqlConnection conexion = new MySqlConnection())
+            {
+                if (listView1.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("Por favor selecione un producto para eliminar ");
+                    return;
+                }
+                string id = listView1.SelectedItems[0].Text;
+                try
+                {
+                    conexion.Open(); // abrimos la conexion 
+                    string consulta = "DELETE FROM  Contactos WHERE ID = @ID "; // creamos la consulta 
+                    MySqlCommand cmd = new MySqlCommand(consulta, conexion);
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    if (filasAfectadas <0)
+                    {
+                        MessageBox.Show(" Contacto selecionado y eliminado perfectamente ");
+                        listView1.Items.Remove(listView1.SelectedItems[0]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontro el contatco para eliminar ");
+                    }
+                }
+                catch (Exception ex) 
+                {
+                    MessageBox.Show("error " + ex);
+                }
+               
+            }
         }
     }
 }
