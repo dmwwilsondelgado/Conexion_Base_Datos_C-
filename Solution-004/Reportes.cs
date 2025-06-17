@@ -16,5 +16,10 @@ namespace Solution_004
         {
             InitializeComponent();
         }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,16 +33,16 @@
             cbCliente = new ComboBox();
             label1 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            listViewProductosSelecionados = new ListView();
-            comboBox1 = new ComboBox();
+            listViewFacturas = new ListView();
+            cbProducto = new ComboBox();
             label2 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            nudCantidad = new NumericUpDown();
             label3 = new Label();
             button1 = new Button();
             lblTotalFactura = new Label();
             btnFinalizarVenta = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -52,10 +52,10 @@
             panel1.Controls.Add(lblTotalFactura);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(numericUpDown1);
+            panel1.Controls.Add(nudCantidad);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(listViewProductosSelecionados);
+            panel1.Controls.Add(cbProducto);
+            panel1.Controls.Add(listViewFacturas);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(cbCliente);
@@ -88,21 +88,21 @@
             dateTimePicker1.Size = new Size(230, 23);
             dateTimePicker1.TabIndex = 2;
             // 
-            // listViewProductosSelecionados
+            // listViewFacturas
             // 
-            listViewProductosSelecionados.Location = new Point(318, 37);
-            listViewProductosSelecionados.Name = "listViewProductosSelecionados";
-            listViewProductosSelecionados.Size = new Size(312, 97);
-            listViewProductosSelecionados.TabIndex = 3;
-            listViewProductosSelecionados.UseCompatibleStateImageBehavior = false;
+            listViewFacturas.Location = new Point(318, 48);
+            listViewFacturas.Name = "listViewFacturas";
+            listViewFacturas.Size = new Size(312, 97);
+            listViewFacturas.TabIndex = 3;
+            listViewFacturas.UseCompatibleStateImageBehavior = false;
             // 
-            // comboBox1
+            // cbProducto
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(161, 111);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 4;
+            cbProducto.FormattingEnabled = true;
+            cbProducto.Location = new Point(161, 111);
+            cbProducto.Name = "cbProducto";
+            cbProducto.Size = new Size(121, 23);
+            cbProducto.TabIndex = 4;
             // 
             // label2
             // 
@@ -113,12 +113,12 @@
             label2.TabIndex = 5;
             label2.Text = "Selecionar Prducto";
             // 
-            // numericUpDown1
+            // nudCantidad
             // 
-            numericUpDown1.Location = new Point(173, 159);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 6;
+            nudCantidad.Location = new Point(163, 160);
+            nudCantidad.Name = "nudCantidad";
+            nudCantidad.Size = new Size(120, 23);
+            nudCantidad.TabIndex = 6;
             // 
             // label3
             // 
@@ -150,9 +150,9 @@
             // 
             // btnFinalizarVenta
             // 
-            btnFinalizarVenta.Location = new Point(364, 160);
+            btnFinalizarVenta.Location = new Point(386, 162);
             btnFinalizarVenta.Name = "btnFinalizarVenta";
-            btnFinalizarVenta.Size = new Size(75, 23);
+            btnFinalizarVenta.Size = new Size(167, 23);
             btnFinalizarVenta.TabIndex = 10;
             btnFinalizarVenta.Text = "Finalizar Venta";
             btnFinalizarVenta.UseVisualStyleBackColor = true;
@@ -169,14 +169,14 @@
             Text = "Facturacion";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCantidad).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private ListView listViewProductosSelecionados;
+        private ListView listViewFacturas;
         private DateTimePicker dateTimePicker1;
         private Label label1;
         private ComboBox cbCliente;
@@ -184,8 +184,8 @@
         private Label lblTotalFactura;
         private Button button1;
         private Label label3;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nudCantidad;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cbProducto;
     }
 }

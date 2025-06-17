@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Solution_004
+namespace Solution_005
 {
-    public partial class Ventas : Form
+    public partial class ClientesFrecuentes : Form
     {
-        public Ventas()
+        public ClientesFrecuentes()
         {
             InitializeComponent();
-        }
-
-        private void btnFinalizarVenta_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
