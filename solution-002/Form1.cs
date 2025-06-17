@@ -1,15 +1,10 @@
-namespace Solution_001
+namespace solution_002
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

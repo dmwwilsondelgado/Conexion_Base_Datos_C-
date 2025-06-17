@@ -33,3 +33,4 @@ C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-001\bin\Debug\net8.0-wi
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-001\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-001\obj\Debug\net8.0-windows\Solution-001.csproj.AssemblyReference.cache
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-001\obj\Debug\net8.0-windows\Solution.8F142562.Up2Date
+C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-001\obj\Debug\net8.0-windows\Solution_001.Properties.Resources.resources
