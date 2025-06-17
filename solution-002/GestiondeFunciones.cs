@@ -16,5 +16,10 @@ namespace solution_002
         {
             InitializeComponent();
         }
+
+        private void btnEditarFuncion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

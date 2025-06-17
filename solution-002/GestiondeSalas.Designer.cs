@@ -40,7 +40,7 @@
             btnEliminarSala = new Button();
             btnVerSalasa = new Button();
             btnVolver = new Button();
-            listView1 = new ListView();
+            listViewSalas = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
@@ -52,7 +52,7 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(listView1);
+            panel1.Controls.Add(listViewSalas);
             panel1.Controls.Add(btnVolver);
             panel1.Controls.Add(btnVerSalasa);
             panel1.Controls.Add(btnEliminarSala);
@@ -154,15 +154,15 @@
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // listViewSalas
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
-            listView1.Location = new Point(287, 26);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(348, 227);
-            listView1.TabIndex = 10;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewSalas.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            listViewSalas.Location = new Point(287, 26);
+            listViewSalas.Name = "listViewSalas";
+            listViewSalas.Size = new Size(348, 227);
+            listViewSalas.TabIndex = 10;
+            listViewSalas.UseCompatibleStateImageBehavior = false;
+            listViewSalas.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -198,7 +198,7 @@
         #endregion
 
         private Panel panel1;
-        private ListView listView1;
+        private ListView listViewSalas;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
