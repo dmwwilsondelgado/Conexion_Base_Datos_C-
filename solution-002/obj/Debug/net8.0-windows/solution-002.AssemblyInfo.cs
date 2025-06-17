@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("solution-002")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Solution-002")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2eae125f926f691220ce92112a563c535510ed2c")]
-[assembly: System.Reflection.AssemblyProductAttribute("solution-002")]
-[assembly: System.Reflection.AssemblyTitleAttribute("solution-002")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6469bfbcee95d7b7ea55a6ff98cff553c3f01df1")]
+[assembly: System.Reflection.AssemblyProductAttribute("Solution-002")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Solution-002")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
