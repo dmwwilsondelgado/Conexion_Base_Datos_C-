@@ -1,8 +1,8 @@
 namespace Solution_003
 {
-    public partial class Form1 : Form
+    public partial class Gestion : Form
     {
-        public Form1()
+        public Gestion()
         {
             InitializeComponent();
         }
