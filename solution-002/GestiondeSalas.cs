@@ -16,5 +16,19 @@ namespace solution_002
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            GestiondePeliculas f1 = new GestiondePeliculas();
+            f1.Show();
+            this.Close();
+        }
+
+        private void btnSeguir_Click(object sender, EventArgs e)
+        {
+            GestionVentasEntrada f2 = new GestionVentasEntrada();
+            f2.Show();
+            this.Hide();
+        }
     }
 }

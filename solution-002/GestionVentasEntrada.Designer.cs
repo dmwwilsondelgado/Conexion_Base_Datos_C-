@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionVentasEntrada));
             panel1 = new Panel();
-            listViewEntradas = new ListView();
-            cbClientes = new ComboBox();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            label2 = new Label();
-            btnVender = new Button();
-            label3 = new Label();
-            label4 = new Label();
-            btnEntradas = new Button();
             btnCerrar = new Button();
+            btnEntradas = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            btnVender = new Button();
+            label2 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            cbClientes = new ComboBox();
+            listViewEntradas = new ListView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -65,81 +65,15 @@
             panel1.Size = new Size(720, 377);
             panel1.TabIndex = 0;
             // 
-            // listViewEntradas
+            // btnCerrar
             // 
-            listViewEntradas.Location = new Point(296, 50);
-            listViewEntradas.Name = "listViewEntradas";
-            listViewEntradas.Size = new Size(381, 211);
-            listViewEntradas.TabIndex = 0;
-            listViewEntradas.UseCompatibleStateImageBehavior = false;
-            // 
-            // cbClientes
-            // 
-            cbClientes.FormattingEnabled = true;
-            cbClientes.Location = new Point(59, 82);
-            cbClientes.Name = "cbClientes";
-            cbClientes.Size = new Size(121, 23);
-            cbClientes.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(35, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(92, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Lista de Clientes";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(58, 149);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 3;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(132, 219);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(35, 221);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Disponibles :";
-            // 
-            // btnVender
-            // 
-            btnVender.Location = new Point(105, 309);
-            btnVender.Name = "btnVender";
-            btnVender.Size = new Size(75, 23);
-            btnVender.TabIndex = 6;
-            btnVender.Text = "Vender Entrada";
-            btnVender.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(38, 113);
-            label3.Name = "label3";
-            label3.Size = new Size(115, 15);
-            label3.TabIndex = 7;
-            label3.Text = "Selecione la Funcion";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(43, 192);
-            label4.Name = "label4";
-            label4.Size = new Size(180, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Selecione el Numero de Entradas";
+            btnCerrar.Location = new Point(631, 346);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(75, 23);
+            btnCerrar.TabIndex = 10;
+            btnCerrar.Text = "Cerrar Sesion";
+            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.Click += btnCerrar_Click;
             // 
             // btnEntradas
             // 
@@ -150,14 +84,81 @@
             btnEntradas.Text = "Ver Entradas";
             btnEntradas.UseVisualStyleBackColor = true;
             // 
-            // btnCerrar
+            // label4
             // 
-            btnCerrar.Location = new Point(631, 346);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(75, 23);
-            btnCerrar.TabIndex = 10;
-            btnCerrar.Text = "Cerrar Sesion";
-            btnCerrar.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(43, 192);
+            label4.Name = "label4";
+            label4.Size = new Size(180, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Selecione el Numero de Entradas";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(38, 113);
+            label3.Name = "label3";
+            label3.Size = new Size(115, 15);
+            label3.TabIndex = 7;
+            label3.Text = "Selecione la Funcion";
+            // 
+            // btnVender
+            // 
+            btnVender.Location = new Point(105, 309);
+            btnVender.Name = "btnVender";
+            btnVender.Size = new Size(75, 23);
+            btnVender.TabIndex = 6;
+            btnVender.Text = "Vender Entrada";
+            btnVender.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 221);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Disponibles :";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(132, 219);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(58, 149);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(35, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(92, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Lista de Clientes";
+            // 
+            // cbClientes
+            // 
+            cbClientes.FormattingEnabled = true;
+            cbClientes.Location = new Point(59, 82);
+            cbClientes.Name = "cbClientes";
+            cbClientes.Size = new Size(121, 23);
+            cbClientes.TabIndex = 1;
+            // 
+            // listViewEntradas
+            // 
+            listViewEntradas.Location = new Point(296, 50);
+            listViewEntradas.Name = "listViewEntradas";
+            listViewEntradas.Size = new Size(381, 211);
+            listViewEntradas.TabIndex = 0;
+            listViewEntradas.UseCompatibleStateImageBehavior = false;
             // 
             // GestionVentasEntrada
             // 

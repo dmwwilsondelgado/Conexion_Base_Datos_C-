@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiondePeliculas));
             panel1 = new Panel();
-            btnSiguiente = new Button();
+            btnSeguir = new Button();
             lab = new Label();
             txtIdPelicula = new TextBox();
             btnVolver = new Button();
@@ -60,7 +60,7 @@
             // 
             panel1.BackColor = SystemColors.HighlightText;
             panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(btnSiguiente);
+            panel1.Controls.Add(btnSeguir);
             panel1.Controls.Add(lab);
             panel1.Controls.Add(txtIdPelicula);
             panel1.Controls.Add(btnVolver);
@@ -82,14 +82,15 @@
             panel1.Size = new Size(743, 449);
             panel1.TabIndex = 0;
             // 
-            // btnSiguiente
+            // btnSeguir
             // 
-            btnSiguiente.Location = new Point(548, 409);
-            btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new Size(75, 23);
-            btnSiguiente.TabIndex = 16;
-            btnSiguiente.Text = "Siguiente";
-            btnSiguiente.UseVisualStyleBackColor = true;
+            btnSeguir.Location = new Point(548, 409);
+            btnSeguir.Name = "btnSeguir";
+            btnSeguir.Size = new Size(75, 23);
+            btnSeguir.TabIndex = 16;
+            btnSeguir.Text = "Siguiente";
+            btnSeguir.UseVisualStyleBackColor = true;
+            btnSeguir.Click += btnSeguir_Click;
             // 
             // lab
             // 
@@ -115,6 +116,7 @@
             btnVolver.TabIndex = 13;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // btnVer
             // 
@@ -293,6 +295,6 @@
         private Button btnVolver;
         private Label lab;
         private TextBox txtIdPelicula;
-        private Button btnSiguiente;
+        private Button btnSeguir;
     }
 }

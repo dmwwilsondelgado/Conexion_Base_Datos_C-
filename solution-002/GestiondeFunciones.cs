@@ -21,5 +21,19 @@ namespace solution_002
         {
 
         }
+
+        private void btnSeguir_Click(object sender, EventArgs e)
+        {
+            GestiondeSalas f2 = new GestiondeSalas();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            GestiondePeliculas f1 = new GestiondePeliculas();
+            f1.Show();
+            this.Close(); 
+        }
     }
 }

@@ -135,7 +135,7 @@ namespace solution_002
         }
 
 
-        
+
 
         private void btnVerListadoPeliculas_Click(object sender, EventArgs e)
         {
@@ -169,6 +169,20 @@ namespace solution_002
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void btnSeguir_Click(object sender, EventArgs e)
+        {
+            GestiondeFunciones f2 = new GestiondeFunciones();
+            f2.Show();
+            this.Hide();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Close();
         }
     }
 }
