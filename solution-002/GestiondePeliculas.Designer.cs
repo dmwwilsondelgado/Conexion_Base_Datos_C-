@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestiondePeliculas));
             panel1 = new Panel();
-            txtTituloPelicula = new TextBox();
-            txtGeneroPelicula = new TextBox();
-            numericDuracionPelicula = new NumericUpDown();
-            cmbxClasificacionPelicula = new ComboBox();
-            btnAgregarPelicula = new Button();
-            btnEditarPelicula = new Button();
-            btnEliminarPelicula = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            listViewPeliculas = new ListView();
+            btnVolver = new Button();
             btnVerListadoPeliculas = new Button();
+            listViewPeliculas = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
-            btnVolver = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            btnEliminarPelicula = new Button();
+            btnEditarPelicula = new Button();
+            btnAgregarPelicula = new Button();
+            cmbxClasificacionPelicula = new ComboBox();
+            numericDuracionPelicula = new NumericUpDown();
+            txtGeneroPelicula = new TextBox();
+            txtTituloPelicula = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericDuracionPelicula).BeginInit();
             SuspendLayout();
@@ -76,97 +76,23 @@
             panel1.Size = new Size(743, 449);
             panel1.TabIndex = 0;
             // 
-            // txtTituloPelicula
+            // btnVolver
             // 
-            txtTituloPelicula.Location = new Point(109, 31);
-            txtTituloPelicula.Name = "txtTituloPelicula";
-            txtTituloPelicula.Size = new Size(120, 23);
-            txtTituloPelicula.TabIndex = 0;
+            btnVolver.Location = new Point(640, 409);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(78, 23);
+            btnVolver.TabIndex = 13;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
             // 
-            // txtGeneroPelicula
+            // btnVerListadoPeliculas
             // 
-            txtGeneroPelicula.Location = new Point(109, 82);
-            txtGeneroPelicula.Name = "txtGeneroPelicula";
-            txtGeneroPelicula.Size = new Size(125, 23);
-            txtGeneroPelicula.TabIndex = 1;
-            // 
-            // numericDuracionPelicula
-            // 
-            numericDuracionPelicula.Location = new Point(109, 141);
-            numericDuracionPelicula.Name = "numericDuracionPelicula";
-            numericDuracionPelicula.Size = new Size(120, 23);
-            numericDuracionPelicula.TabIndex = 2;
-            // 
-            // cmbxClasificacionPelicula
-            // 
-            cmbxClasificacionPelicula.FormattingEnabled = true;
-            cmbxClasificacionPelicula.Location = new Point(109, 199);
-            cmbxClasificacionPelicula.Name = "cmbxClasificacionPelicula";
-            cmbxClasificacionPelicula.Size = new Size(121, 23);
-            cmbxClasificacionPelicula.TabIndex = 3;
-            // 
-            // btnAgregarPelicula
-            // 
-            btnAgregarPelicula.Location = new Point(78, 254);
-            btnAgregarPelicula.Name = "btnAgregarPelicula";
-            btnAgregarPelicula.Size = new Size(137, 23);
-            btnAgregarPelicula.TabIndex = 4;
-            btnAgregarPelicula.Text = "Agregar Pelicula";
-            btnAgregarPelicula.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarPelicula
-            // 
-            btnEditarPelicula.Location = new Point(80, 298);
-            btnEditarPelicula.Name = "btnEditarPelicula";
-            btnEditarPelicula.Size = new Size(135, 23);
-            btnEditarPelicula.TabIndex = 5;
-            btnEditarPelicula.Text = "Editar Pelicula";
-            btnEditarPelicula.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarPelicula
-            // 
-            btnEliminarPelicula.Location = new Point(80, 343);
-            btnEliminarPelicula.Name = "btnEliminarPelicula";
-            btnEliminarPelicula.Size = new Size(135, 23);
-            btnEliminarPelicula.TabIndex = 6;
-            btnEliminarPelicula.Text = "Eliminar Pelicula";
-            btnEliminarPelicula.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(32, 35);
-            label1.Name = "label1";
-            label1.Size = new Size(37, 15);
-            label1.TabIndex = 7;
-            label1.Text = "Titulo";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(32, 85);
-            label2.Name = "label2";
-            label2.Size = new Size(45, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Genero";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(25, 143);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Duracion";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(25, 202);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Clasificacion";
+            btnVerListadoPeliculas.Location = new Point(415, 254);
+            btnVerListadoPeliculas.Name = "btnVerListadoPeliculas";
+            btnVerListadoPeliculas.Size = new Size(185, 23);
+            btnVerListadoPeliculas.TabIndex = 12;
+            btnVerListadoPeliculas.Text = "Ver Peliculas Dsiponibles";
+            btnVerListadoPeliculas.UseVisualStyleBackColor = true;
             // 
             // listViewPeliculas
             // 
@@ -177,15 +103,6 @@
             listViewPeliculas.TabIndex = 11;
             listViewPeliculas.UseCompatibleStateImageBehavior = false;
             listViewPeliculas.View = View.Details;
-            // 
-            // btnVerListadoPeliculas
-            // 
-            btnVerListadoPeliculas.Location = new Point(415, 254);
-            btnVerListadoPeliculas.Name = "btnVerListadoPeliculas";
-            btnVerListadoPeliculas.Size = new Size(185, 23);
-            btnVerListadoPeliculas.TabIndex = 12;
-            btnVerListadoPeliculas.Text = "Ver Peliculas Dsiponibles";
-            btnVerListadoPeliculas.UseVisualStyleBackColor = true;
             // 
             // columnHeader1
             // 
@@ -210,14 +127,98 @@
             columnHeader5.Text = "Clasificacion";
             columnHeader5.Width = 120;
             // 
-            // btnVolver
+            // label4
             // 
-            btnVolver.Location = new Point(640, 409);
-            btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(78, 23);
-            btnVolver.TabIndex = 13;
-            btnVolver.Text = "Volver";
-            btnVolver.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(25, 202);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Clasificacion";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(25, 143);
+            label3.Name = "label3";
+            label3.Size = new Size(55, 15);
+            label3.TabIndex = 9;
+            label3.Text = "Duracion";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(32, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(45, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Genero";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(32, 35);
+            label1.Name = "label1";
+            label1.Size = new Size(37, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Titulo";
+            // 
+            // btnEliminarPelicula
+            // 
+            btnEliminarPelicula.Location = new Point(80, 343);
+            btnEliminarPelicula.Name = "btnEliminarPelicula";
+            btnEliminarPelicula.Size = new Size(135, 23);
+            btnEliminarPelicula.TabIndex = 6;
+            btnEliminarPelicula.Text = "Eliminar Pelicula";
+            btnEliminarPelicula.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarPelicula
+            // 
+            btnEditarPelicula.Location = new Point(80, 298);
+            btnEditarPelicula.Name = "btnEditarPelicula";
+            btnEditarPelicula.Size = new Size(135, 23);
+            btnEditarPelicula.TabIndex = 5;
+            btnEditarPelicula.Text = "Editar Pelicula";
+            btnEditarPelicula.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarPelicula
+            // 
+            btnAgregarPelicula.Location = new Point(78, 254);
+            btnAgregarPelicula.Name = "btnAgregarPelicula";
+            btnAgregarPelicula.Size = new Size(137, 23);
+            btnAgregarPelicula.TabIndex = 4;
+            btnAgregarPelicula.Text = "Agregar Pelicula";
+            btnAgregarPelicula.UseVisualStyleBackColor = true;
+            btnAgregarPelicula.Click += btnAgregarPelicula_Click;
+            // 
+            // cmbxClasificacionPelicula
+            // 
+            cmbxClasificacionPelicula.FormattingEnabled = true;
+            cmbxClasificacionPelicula.Location = new Point(109, 199);
+            cmbxClasificacionPelicula.Name = "cmbxClasificacionPelicula";
+            cmbxClasificacionPelicula.Size = new Size(121, 23);
+            cmbxClasificacionPelicula.TabIndex = 3;
+            // 
+            // numericDuracionPelicula
+            // 
+            numericDuracionPelicula.Location = new Point(109, 141);
+            numericDuracionPelicula.Name = "numericDuracionPelicula";
+            numericDuracionPelicula.Size = new Size(120, 23);
+            numericDuracionPelicula.TabIndex = 2;
+            // 
+            // txtGeneroPelicula
+            // 
+            txtGeneroPelicula.Location = new Point(109, 82);
+            txtGeneroPelicula.Name = "txtGeneroPelicula";
+            txtGeneroPelicula.Size = new Size(125, 23);
+            txtGeneroPelicula.TabIndex = 1;
+            // 
+            // txtTituloPelicula
+            // 
+            txtTituloPelicula.Location = new Point(109, 31);
+            txtTituloPelicula.Name = "txtTituloPelicula";
+            txtTituloPelicula.Size = new Size(120, 23);
+            txtTituloPelicula.TabIndex = 0;
             // 
             // GestiondePeliculas
             // 

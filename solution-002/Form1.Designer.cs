@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             panel2 = new Panel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             button1 = new Button();
+            txtCorreo = new TextBox();
+            txtName = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -56,14 +56,59 @@
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.BorderStyle = BorderStyle.Fixed3D;
             panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtCorreo);
+            panel2.Controls.Add(txtName);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(7, 11);
             panel2.Name = "panel2";
             panel2.Size = new Size(406, 190);
             panel2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
+            button1.Location = new Point(113, 120);
+            button1.Name = "button1";
+            button1.Size = new Size(157, 46);
+            button1.TabIndex = 4;
+            button1.Text = "Registrate";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(127, 59);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(198, 23);
+            txtCorreo.TabIndex = 3;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(127, 18);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(198, 23);
+            txtName.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
+            label3.Location = new Point(22, 59);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 23);
+            label3.TabIndex = 1;
+            label3.Text = "Correo";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
+            label2.Location = new Point(22, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(88, 23);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre";
             // 
             // label1
             // 
@@ -76,50 +121,6 @@
             label1.Size = new Size(143, 30);
             label1.TabIndex = 0;
             label1.Text = "Cine Bomm";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
-            label2.Location = new Point(22, 18);
-            label2.Name = "label2";
-            label2.Size = new Size(88, 23);
-            label2.TabIndex = 0;
-            label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
-            label3.Location = new Point(22, 59);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 23);
-            label3.TabIndex = 1;
-            label3.Text = "Correo";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(127, 18);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 23);
-            textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(127, 59);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(198, 23);
-            textBox2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Italic);
-            button1.Location = new Point(113, 120);
-            button1.Name = "button1";
-            button1.Size = new Size(157, 46);
-            button1.TabIndex = 4;
-            button1.Text = "Registrate";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -143,8 +144,8 @@
 
         private Panel panel1;
         private Panel panel2;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtCorreo;
+        private TextBox txtName;
         private Label label3;
         private Label label2;
         private Label label1;
