@@ -62,7 +62,6 @@
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             panel4 = new Panel();
-            btnEliminarMovimiento = new Button();
             btnGuardarInventarioMovimiento = new Button();
             label10 = new Label();
             txtCantidad = new TextBox();
@@ -360,7 +359,6 @@
             // 
             panel4.BackColor = SystemColors.ButtonHighlight;
             panel4.BorderStyle = BorderStyle.Fixed3D;
-            panel4.Controls.Add(btnEliminarMovimiento);
             panel4.Controls.Add(btnGuardarInventarioMovimiento);
             panel4.Controls.Add(label10);
             panel4.Controls.Add(txtCantidad);
@@ -372,18 +370,9 @@
             panel4.Size = new Size(386, 246);
             panel4.TabIndex = 6;
             // 
-            // btnEliminarMovimiento
-            // 
-            btnEliminarMovimiento.Location = new Point(163, 181);
-            btnEliminarMovimiento.Name = "btnEliminarMovimiento";
-            btnEliminarMovimiento.Size = new Size(136, 23);
-            btnEliminarMovimiento.TabIndex = 7;
-            btnEliminarMovimiento.Text = "Eliminar Movimiento";
-            btnEliminarMovimiento.UseVisualStyleBackColor = true;
-            // 
             // btnGuardarInventarioMovimiento
             // 
-            btnGuardarInventarioMovimiento.Location = new Point(22, 181);
+            btnGuardarInventarioMovimiento.Location = new Point(141, 166);
             btnGuardarInventarioMovimiento.Name = "btnGuardarInventarioMovimiento";
             btnGuardarInventarioMovimiento.Size = new Size(127, 23);
             btnGuardarInventarioMovimiento.TabIndex = 6;
@@ -509,7 +498,6 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
-        private Button btnEliminarMovimiento;
         private Button btnGuardarInventarioMovimiento;
         private DateTimePicker dateTimePicker1;
         private Label label10;

@@ -30,18 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestion));
             panel1 = new Panel();
-            txtUsuario = new TextBox();
-            txtPassword = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtPassword = new TextBox();
+            txtUsuario = new TextBox();
+            btnIngresar = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(btnIngresar);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
@@ -52,38 +54,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(617, 285);
             panel1.TabIndex = 0;
-            // 
-            // txtUsuario
-            // 
-            txtUsuario.Location = new Point(248, 117);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(255, 23);
-            txtUsuario.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            txtPassword.Location = new Point(248, 201);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(256, 23);
-            txtPassword.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(81, 117);
-            label1.Name = "label1";
-            label1.Size = new Size(126, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Usuario Administrador";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(129, 204);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Contraseña";
             // 
             // label3
             // 
@@ -104,6 +74,48 @@
             label4.Size = new Size(37, 15);
             label4.TabIndex = 4;
             label4.Text = "Login";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(128, 172);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Contraseña";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(81, 117);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Usuario Administrador";
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(247, 169);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(256, 23);
+            txtPassword.TabIndex = 1;
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.Location = new Point(248, 117);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(255, 23);
+            txtUsuario.TabIndex = 0;
+            // 
+            // btnIngresar
+            // 
+            btnIngresar.Location = new Point(262, 211);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(120, 48);
+            btnIngresar.TabIndex = 5;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // Gestion
             // 
@@ -129,5 +141,6 @@
         private Label label1;
         private TextBox txtPassword;
         private TextBox txtUsuario;
+        private Button btnIngresar;
     }
 }

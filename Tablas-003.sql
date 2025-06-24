@@ -41,5 +41,10 @@ create table detalle_factura (
     foreign key (id_factura) references facturas(id_factura),
     foreign key (id_producto) references productos(id_producto)
 );
+create table administradores(
+ id int primary key auto_increment,
+ usuario varchar(20),
+ pasword varchar(20)
+);
 
 
