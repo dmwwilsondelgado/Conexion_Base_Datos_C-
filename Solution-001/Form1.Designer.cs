@@ -46,6 +46,7 @@
             panel3 = new Panel();
             btnGuardar2 = new Button();
             btnLimpiarAuditoria = new Button();
+            dateTimePicker1 = new DateTimePicker();
             btnValidarAuditoria = new Button();
             label8 = new Label();
             txtDescripcionAuditoria = new TextBox();
@@ -53,27 +54,22 @@
             txtAfectarAuditoria = new TextBox();
             label6 = new Label();
             txtOperacionDirigidaAuditoria = new TextBox();
-            listView1 = new ListView();
+            listViewGestor = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
-            columnHeader11 = new ColumnHeader();
             panel4 = new Panel();
             btnEliminarMovimiento = new Button();
             btnGuardarInventarioMovimiento = new Button();
-            dateTimePicker1 = new DateTimePicker();
             label10 = new Label();
-            textBox1 = new TextBox();
+            txtCantidad = new TextBox();
             rdSalida = new RadioButton();
             rdEntrada = new RadioButton();
             label9 = new Label();
+            btnMostrar = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericStock).BeginInit();
             panel3.SuspendLayout();
@@ -254,6 +250,13 @@
             btnLimpiarAuditoria.UseVisualStyleBackColor = true;
             btnLimpiarAuditoria.Click += button3_Click;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(54, 190);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 5;
+            // 
             // btnValidarAuditoria
             // 
             btnValidarAuditoria.Location = new Point(96, 219);
@@ -313,62 +316,45 @@
             txtOperacionDirigidaAuditoria.TabIndex = 0;
             txtOperacionDirigidaAuditoria.TextChanged += textBox1_TextChanged;
             // 
-            // listView1
+            // listViewGestor
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11 });
-            listView1.Location = new Point(17, 92);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(765, 212);
-            listView1.TabIndex = 5;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewGestor.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listViewGestor.Location = new Point(17, 92);
+            listViewGestor.Name = "listViewGestor";
+            listViewGestor.Size = new Size(770, 212);
+            listViewGestor.TabIndex = 5;
+            listViewGestor.UseCompatibleStateImageBehavior = false;
+            listViewGestor.View = View.Details;
             // 
             // columnHeader1
             // 
             columnHeader1.Text = "id_producto";
-            columnHeader1.Width = 70;
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
             columnHeader2.Text = "descripcion";
-            columnHeader2.Width = 80;
+            columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
             columnHeader3.Text = "precio";
+            columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
             columnHeader4.Text = "stock";
+            columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
             columnHeader5.Text = "operacion";
+            columnHeader5.Width = 120;
             // 
             // columnHeader6
             // 
             columnHeader6.Text = "Tabla";
-            // 
-            // columnHeader7
-            // 
-            columnHeader7.Text = "descripcion_auditoria";
-            // 
-            // columnHeader8
-            // 
-            columnHeader8.Text = "id_movimiento";
-            columnHeader8.Width = 80;
-            // 
-            // columnHeader9
-            // 
-            columnHeader9.Text = "movimiento";
-            // 
-            // columnHeader10
-            // 
-            columnHeader10.Text = "cantidad";
-            // 
-            // columnHeader11
-            // 
-            columnHeader11.Text = "fecha";
+            columnHeader6.Width = 120;
             // 
             // panel4
             // 
@@ -377,7 +363,7 @@
             panel4.Controls.Add(btnEliminarMovimiento);
             panel4.Controls.Add(btnGuardarInventarioMovimiento);
             panel4.Controls.Add(label10);
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(txtCantidad);
             panel4.Controls.Add(rdSalida);
             panel4.Controls.Add(rdEntrada);
             panel4.Controls.Add(label9);
@@ -403,13 +389,7 @@
             btnGuardarInventarioMovimiento.TabIndex = 6;
             btnGuardarInventarioMovimiento.Text = "Guardar Movimiento";
             btnGuardarInventarioMovimiento.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(54, 190);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 5;
+            btnGuardarInventarioMovimiento.Click += btnGuardarInventarioMovimiento_Click;
             // 
             // label10
             // 
@@ -420,12 +400,12 @@
             label10.TabIndex = 4;
             label10.Text = "Cantidad de Movimientos";
             // 
-            // textBox1
+            // txtCantidad
             // 
-            textBox1.Location = new Point(199, 95);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            txtCantidad.Location = new Point(199, 95);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(100, 23);
+            txtCantidad.TabIndex = 3;
             // 
             // rdSalida
             // 
@@ -458,14 +438,25 @@
             label9.TabIndex = 0;
             label9.Text = "Panel de Movimientos ";
             // 
+            // btnMostrar
+            // 
+            btnMostrar.Location = new Point(323, 310);
+            btnMostrar.Name = "btnMostrar";
+            btnMostrar.Size = new Size(124, 23);
+            btnMostrar.TabIndex = 7;
+            btnMostrar.Text = "Mostrar";
+            btnMostrar.UseVisualStyleBackColor = true;
+            btnMostrar.Click += btnMostrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1101, 678);
+            Controls.Add(btnMostrar);
             Controls.Add(panel4);
-            Controls.Add(listView1);
+            Controls.Add(listViewGestor);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -491,7 +482,7 @@
         private Label label2;
         private Panel panel2;
         private Panel panel3;
-        private ListView listView1;
+        private ListView listViewGestor;
         private Label label5;
         private NumericUpDown numericStock;
         private TextBox txtPrecio;
@@ -518,17 +509,13 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private ColumnHeader columnHeader11;
         private Button btnEliminarMovimiento;
         private Button btnGuardarInventarioMovimiento;
         private DateTimePicker dateTimePicker1;
         private Label label10;
-        private TextBox textBox1;
+        private TextBox txtCantidad;
         private Button btnGuardar;
         private Button btnGuardar2;
+        private Button btnMostrar;
     }
 }
