@@ -11,5 +11,12 @@ namespace Solution_005
         {
 
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ClientesFrecuentes f2 = new ClientesFrecuentes();
+            f2.Show();
+            this.Hide();
+        }
     }
 }

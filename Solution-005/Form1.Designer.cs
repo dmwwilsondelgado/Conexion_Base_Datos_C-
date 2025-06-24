@@ -44,11 +44,13 @@
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
+            label5 = new Label();
+            btnClientes = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(897, 78);
+            textBox1.Location = new Point(904, 172);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(121, 23);
             textBox1.TabIndex = 0;
@@ -56,7 +58,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(739, 81);
+            label1.Location = new Point(746, 175);
             label1.Name = "label1";
             label1.Size = new Size(99, 15);
             label1.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(897, 133);
+            textBox2.Location = new Point(904, 227);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(121, 23);
             textBox2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(749, 141);
+            label2.Location = new Point(756, 235);
             label2.Name = "label2";
             label2.Size = new Size(94, 15);
             label2.TabIndex = 3;
@@ -80,7 +82,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(897, 214);
+            textBox3.Location = new Point(904, 308);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(121, 23);
             textBox3.TabIndex = 4;
@@ -88,7 +90,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(741, 214);
+            label3.Location = new Point(748, 308);
             label3.Name = "label3";
             label3.Size = new Size(100, 15);
             label3.TabIndex = 5;
@@ -97,7 +99,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(897, 278);
+            comboBox1.Location = new Point(904, 372);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 6;
@@ -106,7 +108,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(739, 281);
+            label4.Location = new Point(746, 375);
             label4.Name = "label4";
             label4.Size = new Size(152, 15);
             label4.TabIndex = 7;
@@ -142,7 +144,7 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView1.Location = new Point(35, 47);
+            listView1.Location = new Point(35, 115);
             listView1.Name = "listView1";
             listView1.Size = new Size(636, 336);
             listView1.TabIndex = 11;
@@ -169,11 +171,33 @@
             columnHeader4.Text = "Cliente";
             columnHeader4.Width = 160;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Verdana", 33F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(35, 37);
+            label5.Name = "label5";
+            label5.Size = new Size(275, 53);
+            label5.TabIndex = 12;
+            label5.Text = "Intelli Park ";
+            // 
+            // btnClientes
+            // 
+            btnClientes.Location = new Point(953, 45);
+            btnClientes.Name = "btnClientes";
+            btnClientes.Size = new Size(109, 63);
+            btnClientes.TabIndex = 13;
+            btnClientes.Text = "Ver Clientes";
+            btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1171, 644);
+            Controls.Add(btnClientes);
+            Controls.Add(label5);
             Controls.Add(listView1);
             Controls.Add(btnEliminarVehiculo);
             Controls.Add(btnEditarVehiculo);
@@ -210,5 +234,7 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Label label5;
+        private Button btnClientes;
     }
 }

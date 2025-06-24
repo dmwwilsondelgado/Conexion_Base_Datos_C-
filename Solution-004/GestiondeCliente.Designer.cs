@@ -95,6 +95,7 @@
             btnAgregarCliente.TabIndex = 5;
             btnAgregarCliente.Text = "Agregar Cliente";
             btnAgregarCliente.UseVisualStyleBackColor = true;
+            btnAgregarCliente.Click += btnAgregarCliente_Click;
             // 
             // btnEditarCliente
             // 

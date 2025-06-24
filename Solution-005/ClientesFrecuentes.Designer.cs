@@ -106,7 +106,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(799, 294);
+            label4.Location = new Point(801, 294);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 19;
