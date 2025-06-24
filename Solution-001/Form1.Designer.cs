@@ -32,35 +32,28 @@
             txtNombreProducto = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
+            btnGuardar = new Button();
+            btnLimpiarProducto = new Button();
+            btnValidar = new Button();
+            label5 = new Label();
+            numericStock = new NumericUpDown();
+            txtPrecio = new TextBox();
+            label4 = new Label();
+            txtDescripcion = new TextBox();
+            label3 = new Label();
             label2 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
-            listView1 = new ListView();
-            label3 = new Label();
-            txtDescripcion = new TextBox();
-            label4 = new Label();
-            txtPrecio = new TextBox();
-            numericStock = new NumericUpDown();
-            label5 = new Label();
-            btnValidar = new Button();
-            txtOperacionDirigidaAuditoria = new TextBox();
-            label6 = new Label();
-            txtAfectarAuditoria = new TextBox();
-            label7 = new Label();
-            txtDescripcionAuditoria = new TextBox();
-            label8 = new Label();
-            btnLimpiarProducto = new Button();
-            btnValidarAuditoria = new Button();
+            btnGuardar2 = new Button();
             btnLimpiarAuditoria = new Button();
-            panel4 = new Panel();
-            label9 = new Label();
-            rdEntrada = new RadioButton();
-            rdSalida = new RadioButton();
-            textBox1 = new TextBox();
-            label10 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            btnGuardarInventarioMovimiento = new Button();
-            btnEliminarMovimiento = new Button();
+            btnValidarAuditoria = new Button();
+            label8 = new Label();
+            txtDescripcionAuditoria = new TextBox();
+            label7 = new Label();
+            txtAfectarAuditoria = new TextBox();
+            label6 = new Label();
+            txtOperacionDirigidaAuditoria = new TextBox();
+            listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
@@ -72,9 +65,18 @@
             columnHeader9 = new ColumnHeader();
             columnHeader10 = new ColumnHeader();
             columnHeader11 = new ColumnHeader();
+            panel4 = new Panel();
+            btnEliminarMovimiento = new Button();
+            btnGuardarInventarioMovimiento = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            label10 = new Label();
+            textBox1 = new TextBox();
+            rdSalida = new RadioButton();
+            rdEntrada = new RadioButton();
+            label9 = new Label();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericStock).BeginInit();
+            panel3.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
             // 
@@ -99,6 +101,7 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(btnLimpiarProducto);
             panel1.Controls.Add(btnValidar);
             panel1.Controls.Add(label5);
@@ -114,6 +117,84 @@
             panel1.Size = new Size(299, 299);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(177, 269);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(75, 23);
+            btnGuardar.TabIndex = 8;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnLimpiarProducto
+            // 
+            btnLimpiarProducto.Location = new Point(3, 269);
+            btnLimpiarProducto.Name = "btnLimpiarProducto";
+            btnLimpiarProducto.Size = new Size(103, 23);
+            btnLimpiarProducto.TabIndex = 7;
+            btnLimpiarProducto.Text = "Limpiar Casillas";
+            btnLimpiarProducto.UseVisualStyleBackColor = true;
+            btnLimpiarProducto.Click += btnLimpiarProducto_Click;
+            // 
+            // btnValidar
+            // 
+            btnValidar.Location = new Point(77, 219);
+            btnValidar.Name = "btnValidar";
+            btnValidar.Size = new Size(137, 23);
+            btnValidar.TabIndex = 6;
+            btnValidar.Text = "Validar Producto";
+            btnValidar.UseVisualStyleBackColor = true;
+            btnValidar.Click += btnValidar_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(96, 156);
+            label5.Name = "label5";
+            label5.Size = new Size(76, 15);
+            label5.TabIndex = 6;
+            label5.Text = "Stock Actual ";
+            // 
+            // numericStock
+            // 
+            numericStock.Location = new Point(79, 174);
+            numericStock.Name = "numericStock";
+            numericStock.Size = new Size(131, 23);
+            numericStock.TabIndex = 5;
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(77, 130);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(129, 23);
+            txtPrecio.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(94, 109);
+            label4.Name = "label4";
+            label4.Size = new Size(92, 15);
+            label4.TabIndex = 3;
+            label4.Text = "Precio Producto";
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Location = new Point(77, 83);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(129, 23);
+            txtDescripcion.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(103, 57);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Descripcion";
             // 
             // label2
             // 
@@ -138,7 +219,9 @@
             // 
             panel3.BackColor = SystemColors.ButtonHighlight;
             panel3.BorderStyle = BorderStyle.Fixed3D;
+            panel3.Controls.Add(btnGuardar2);
             panel3.Controls.Add(btnLimpiarAuditoria);
+            panel3.Controls.Add(dateTimePicker1);
             panel3.Controls.Add(btnValidarAuditoria);
             panel3.Controls.Add(label8);
             panel3.Controls.Add(txtDescripcionAuditoria);
@@ -151,139 +234,15 @@
             panel3.Size = new Size(305, 299);
             panel3.TabIndex = 4;
             // 
-            // listView1
+            // btnGuardar2
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11 });
-            listView1.Location = new Point(17, 92);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(765, 212);
-            listView1.TabIndex = 5;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(103, 57);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Descripcion";
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.Location = new Point(77, 83);
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(129, 23);
-            txtDescripcion.TabIndex = 2;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(94, 109);
-            label4.Name = "label4";
-            label4.Size = new Size(92, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Precio Producto";
-            // 
-            // txtPrecio
-            // 
-            txtPrecio.Location = new Point(77, 130);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(129, 23);
-            txtPrecio.TabIndex = 4;
-            // 
-            // numericStock
-            // 
-            numericStock.Location = new Point(79, 174);
-            numericStock.Name = "numericStock";
-            numericStock.Size = new Size(131, 23);
-            numericStock.TabIndex = 5;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(96, 156);
-            label5.Name = "label5";
-            label5.Size = new Size(76, 15);
-            label5.TabIndex = 6;
-            label5.Text = "Stock Actual ";
-            // 
-            // btnValidar
-            // 
-            btnValidar.Location = new Point(77, 219);
-            btnValidar.Name = "btnValidar";
-            btnValidar.Size = new Size(137, 23);
-            btnValidar.TabIndex = 6;
-            btnValidar.Text = "Validar Producto";
-            btnValidar.UseVisualStyleBackColor = true;
-            // 
-            // txtOperacionDirigidaAuditoria
-            // 
-            txtOperacionDirigidaAuditoria.Location = new Point(88, 31);
-            txtOperacionDirigidaAuditoria.Name = "txtOperacionDirigidaAuditoria";
-            txtOperacionDirigidaAuditoria.Size = new Size(122, 23);
-            txtOperacionDirigidaAuditoria.TabIndex = 0;
-            txtOperacionDirigidaAuditoria.TextChanged += textBox1_TextChanged;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(70, 13);
-            label6.Name = "label6";
-            label6.Size = new Size(161, 15);
-            label6.TabIndex = 1;
-            label6.Text = "Operacion ala que va dirigida";
-            // 
-            // txtAfectarAuditoria
-            // 
-            txtAfectarAuditoria.Location = new Point(88, 79);
-            txtAfectarAuditoria.Name = "txtAfectarAuditoria";
-            txtAfectarAuditoria.Size = new Size(122, 23);
-            txtAfectarAuditoria.TabIndex = 2;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(107, 61);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 15);
-            label7.TabIndex = 3;
-            label7.Text = "Tabla a Afectar ";
-            // 
-            // txtDescripcionAuditoria
-            // 
-            txtDescripcionAuditoria.Location = new Point(88, 142);
-            txtDescripcionAuditoria.Name = "txtDescripcionAuditoria";
-            txtDescripcionAuditoria.Size = new Size(122, 23);
-            txtDescripcionAuditoria.TabIndex = 4;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(79, 115);
-            label8.Name = "label8";
-            label8.Size = new Size(142, 15);
-            label8.TabIndex = 5;
-            label8.Text = "Descricion de la Auditoria";
-            // 
-            // btnLimpiarProducto
-            // 
-            btnLimpiarProducto.Location = new Point(3, 269);
-            btnLimpiarProducto.Name = "btnLimpiarProducto";
-            btnLimpiarProducto.Size = new Size(103, 23);
-            btnLimpiarProducto.TabIndex = 7;
-            btnLimpiarProducto.Text = "Limpiar Casillas";
-            btnLimpiarProducto.UseVisualStyleBackColor = true;
-            // 
-            // btnValidarAuditoria
-            // 
-            btnValidarAuditoria.Location = new Point(96, 219);
-            btnValidarAuditoria.Name = "btnValidarAuditoria";
-            btnValidarAuditoria.Size = new Size(114, 23);
-            btnValidarAuditoria.TabIndex = 6;
-            btnValidarAuditoria.Text = "Validar Auditoria";
-            btnValidarAuditoria.UseVisualStyleBackColor = true;
+            btnGuardar2.Location = new Point(210, 269);
+            btnGuardar2.Name = "btnGuardar2";
+            btnGuardar2.Size = new Size(75, 23);
+            btnGuardar2.TabIndex = 9;
+            btnGuardar2.Text = "Guardar";
+            btnGuardar2.UseVisualStyleBackColor = true;
+            btnGuardar2.Click += btnGuardar2_Click;
             // 
             // btnLimpiarAuditoria
             // 
@@ -295,94 +254,74 @@
             btnLimpiarAuditoria.UseVisualStyleBackColor = true;
             btnLimpiarAuditoria.Click += button3_Click;
             // 
-            // panel4
+            // btnValidarAuditoria
             // 
-            panel4.BackColor = SystemColors.ButtonHighlight;
-            panel4.BorderStyle = BorderStyle.Fixed3D;
-            panel4.Controls.Add(btnEliminarMovimiento);
-            panel4.Controls.Add(btnGuardarInventarioMovimiento);
-            panel4.Controls.Add(dateTimePicker1);
-            panel4.Controls.Add(label10);
-            panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(rdSalida);
-            panel4.Controls.Add(rdEntrada);
-            panel4.Controls.Add(label9);
-            panel4.Location = new Point(675, 400);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(386, 246);
-            panel4.TabIndex = 6;
+            btnValidarAuditoria.Location = new Point(96, 219);
+            btnValidarAuditoria.Name = "btnValidarAuditoria";
+            btnValidarAuditoria.Size = new Size(114, 23);
+            btnValidarAuditoria.TabIndex = 6;
+            btnValidarAuditoria.Text = "Validar Auditoria";
+            btnValidarAuditoria.UseVisualStyleBackColor = true;
+            btnValidarAuditoria.Click += btnValidarAuditoria_Click;
             // 
-            // label9
+            // label8
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(34, 21);
-            label9.Name = "label9";
-            label9.Size = new Size(128, 15);
-            label9.TabIndex = 0;
-            label9.Text = "Panel de Movimientos ";
+            label8.AutoSize = true;
+            label8.Location = new Point(79, 115);
+            label8.Name = "label8";
+            label8.Size = new Size(142, 15);
+            label8.TabIndex = 5;
+            label8.Text = "Descricion de la Auditoria";
             // 
-            // rdEntrada
+            // txtDescripcionAuditoria
             // 
-            rdEntrada.AutoSize = true;
-            rdEntrada.Location = new Point(55, 50);
-            rdEntrada.Name = "rdEntrada";
-            rdEntrada.Size = new Size(65, 19);
-            rdEntrada.TabIndex = 1;
-            rdEntrada.TabStop = true;
-            rdEntrada.Text = "entrada";
-            rdEntrada.UseVisualStyleBackColor = true;
+            txtDescripcionAuditoria.Location = new Point(88, 142);
+            txtDescripcionAuditoria.Name = "txtDescripcionAuditoria";
+            txtDescripcionAuditoria.Size = new Size(122, 23);
+            txtDescripcionAuditoria.TabIndex = 4;
             // 
-            // rdSalida
+            // label7
             // 
-            rdSalida.AutoSize = true;
-            rdSalida.Location = new Point(55, 75);
-            rdSalida.Name = "rdSalida";
-            rdSalida.Size = new Size(55, 19);
-            rdSalida.TabIndex = 2;
-            rdSalida.TabStop = true;
-            rdSalida.Text = "salida";
-            rdSalida.UseVisualStyleBackColor = true;
+            label7.AutoSize = true;
+            label7.Location = new Point(107, 61);
+            label7.Name = "label7";
+            label7.Size = new Size(87, 15);
+            label7.TabIndex = 3;
+            label7.Text = "Tabla a Afectar ";
             // 
-            // textBox1
+            // txtAfectarAuditoria
             // 
-            textBox1.Location = new Point(199, 95);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
+            txtAfectarAuditoria.Location = new Point(88, 79);
+            txtAfectarAuditoria.Name = "txtAfectarAuditoria";
+            txtAfectarAuditoria.Size = new Size(122, 23);
+            txtAfectarAuditoria.TabIndex = 2;
             // 
-            // label10
+            // label6
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(40, 101);
-            label10.Name = "label10";
-            label10.Size = new Size(144, 15);
-            label10.TabIndex = 4;
-            label10.Text = "Cantidad de Movimientos";
+            label6.AutoSize = true;
+            label6.Location = new Point(70, 13);
+            label6.Name = "label6";
+            label6.Size = new Size(161, 15);
+            label6.TabIndex = 1;
+            label6.Text = "Operacion ala que va dirigida";
             // 
-            // dateTimePicker1
+            // txtOperacionDirigidaAuditoria
             // 
-            dateTimePicker1.Location = new Point(40, 138);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 5;
+            txtOperacionDirigidaAuditoria.Location = new Point(88, 31);
+            txtOperacionDirigidaAuditoria.Name = "txtOperacionDirigidaAuditoria";
+            txtOperacionDirigidaAuditoria.Size = new Size(122, 23);
+            txtOperacionDirigidaAuditoria.TabIndex = 0;
+            txtOperacionDirigidaAuditoria.TextChanged += textBox1_TextChanged;
             // 
-            // btnGuardarInventarioMovimiento
+            // listView1
             // 
-            btnGuardarInventarioMovimiento.Location = new Point(22, 181);
-            btnGuardarInventarioMovimiento.Name = "btnGuardarInventarioMovimiento";
-            btnGuardarInventarioMovimiento.Size = new Size(127, 23);
-            btnGuardarInventarioMovimiento.TabIndex = 6;
-            btnGuardarInventarioMovimiento.Text = "Guardar Movimiento";
-            btnGuardarInventarioMovimiento.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarMovimiento
-            // 
-            btnEliminarMovimiento.Location = new Point(163, 181);
-            btnEliminarMovimiento.Name = "btnEliminarMovimiento";
-            btnEliminarMovimiento.Size = new Size(136, 23);
-            btnEliminarMovimiento.TabIndex = 7;
-            btnEliminarMovimiento.Text = "Eliminar Movimiento";
-            btnEliminarMovimiento.UseVisualStyleBackColor = true;
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11 });
+            listView1.Location = new Point(17, 92);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(765, 212);
+            listView1.TabIndex = 5;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -431,6 +370,94 @@
             // 
             columnHeader11.Text = "fecha";
             // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ButtonHighlight;
+            panel4.BorderStyle = BorderStyle.Fixed3D;
+            panel4.Controls.Add(btnEliminarMovimiento);
+            panel4.Controls.Add(btnGuardarInventarioMovimiento);
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(rdSalida);
+            panel4.Controls.Add(rdEntrada);
+            panel4.Controls.Add(label9);
+            panel4.Location = new Point(675, 400);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(386, 246);
+            panel4.TabIndex = 6;
+            // 
+            // btnEliminarMovimiento
+            // 
+            btnEliminarMovimiento.Location = new Point(163, 181);
+            btnEliminarMovimiento.Name = "btnEliminarMovimiento";
+            btnEliminarMovimiento.Size = new Size(136, 23);
+            btnEliminarMovimiento.TabIndex = 7;
+            btnEliminarMovimiento.Text = "Eliminar Movimiento";
+            btnEliminarMovimiento.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarInventarioMovimiento
+            // 
+            btnGuardarInventarioMovimiento.Location = new Point(22, 181);
+            btnGuardarInventarioMovimiento.Name = "btnGuardarInventarioMovimiento";
+            btnGuardarInventarioMovimiento.Size = new Size(127, 23);
+            btnGuardarInventarioMovimiento.TabIndex = 6;
+            btnGuardarInventarioMovimiento.Text = "Guardar Movimiento";
+            btnGuardarInventarioMovimiento.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(54, 190);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 5;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(40, 101);
+            label10.Name = "label10";
+            label10.Size = new Size(144, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Cantidad de Movimientos";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(199, 95);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 3;
+            // 
+            // rdSalida
+            // 
+            rdSalida.AutoSize = true;
+            rdSalida.Location = new Point(55, 75);
+            rdSalida.Name = "rdSalida";
+            rdSalida.Size = new Size(55, 19);
+            rdSalida.TabIndex = 2;
+            rdSalida.TabStop = true;
+            rdSalida.Text = "salida";
+            rdSalida.UseVisualStyleBackColor = true;
+            // 
+            // rdEntrada
+            // 
+            rdEntrada.AutoSize = true;
+            rdEntrada.Location = new Point(55, 50);
+            rdEntrada.Name = "rdEntrada";
+            rdEntrada.Size = new Size(65, 19);
+            rdEntrada.TabIndex = 1;
+            rdEntrada.TabStop = true;
+            rdEntrada.Text = "entrada";
+            rdEntrada.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(34, 21);
+            label9.Name = "label9";
+            label9.Size = new Size(128, 15);
+            label9.TabIndex = 0;
+            label9.Text = "Panel de Movimientos ";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -447,9 +474,9 @@
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericStock).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericStock).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ResumeLayout(false);
@@ -501,5 +528,7 @@
         private DateTimePicker dateTimePicker1;
         private Label label10;
         private TextBox textBox1;
+        private Button btnGuardar;
+        private Button btnGuardar2;
     }
 }
