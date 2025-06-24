@@ -38,3 +38,39 @@ create table parqueo (
     foreign key (placa) references vehiculos(placa),
     foreign key (id_empleado) references empleados(id_empleado)
 );
+
+
+
+use base_datos_solution001;
+show databases;
+
+select * from clientes;
+select * from inventario_movimientos;
+describe peliculas;
+
+describe inventario_movimientos;
+select * from productos ;
+
+
+describe auditoria;
+
+
+
+alter table inventario_movimientos modify fecha_movimiento varchar(100);
+
+
+create table administradores(
+ id int primary key auto_increment,
+ usuario varchar(20),
+ pasword varchar(20)
+);
+insert into administradores (usuario, pasword)
+values ('admin', '12345');
+select * from administradores;
+
+
+
+describe clientes;
+
+
+describe clientes;
