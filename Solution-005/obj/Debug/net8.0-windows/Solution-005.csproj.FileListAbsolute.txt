@@ -35,3 +35,4 @@ C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-005\bin\Debug\net8.0-wi
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-005\obj\Debug\net8.0-windows\Solution-005.csproj.AssemblyReference.cache
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-005\obj\Debug\net8.0-windows\Solution.AC802562.Up2Date
 C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-005\obj\Debug\net8.0-windows\Solution_005.Empleados.resources
+C:\Users\Windows 10\Desktop\Conexion_Base_Datos\Solution-005\obj\Debug\net8.0-windows\Solution_005.Properties.Resources.resources

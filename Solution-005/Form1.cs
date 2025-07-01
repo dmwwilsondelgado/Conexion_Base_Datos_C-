@@ -116,7 +116,6 @@ namespace Solution_005
         {
             Empleados f2 = new Empleados();
             f2.Show();
-       
         }
     }
 }
