@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtPlaca = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtVehiculo = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtColor = new TextBox();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            cmbxCliente = new ComboBox();
             label4 = new Label();
             btnRegistarVehiculo = new Button();
-            btnEditarVehiculo = new Button();
-            btnEliminarVehiculo = new Button();
-            listView1 = new ListView();
+            listViewVehiculos = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             label5 = new Label();
             btnClientes = new Button();
+            btnVer = new Button();
+            btnVerEmpleados = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtPlaca
             // 
-            textBox1.Location = new Point(904, 172);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(121, 23);
-            textBox1.TabIndex = 0;
+            txtPlaca.Location = new Point(904, 172);
+            txtPlaca.Name = "txtPlaca";
+            txtPlaca.Size = new Size(121, 23);
+            txtPlaca.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,12 +64,12 @@
             label1.TabIndex = 1;
             label1.Text = "Placa de Vehiculo";
             // 
-            // textBox2
+            // txtVehiculo
             // 
-            textBox2.Location = new Point(904, 227);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(121, 23);
-            textBox2.TabIndex = 2;
+            txtVehiculo.Location = new Point(904, 227);
+            txtVehiculo.Name = "txtVehiculo";
+            txtVehiculo.Size = new Size(121, 23);
+            txtVehiculo.TabIndex = 2;
             // 
             // label2
             // 
@@ -80,12 +80,12 @@
             label2.TabIndex = 3;
             label2.Text = "Tipo de Vehiculo";
             // 
-            // textBox3
+            // txtColor
             // 
-            textBox3.Location = new Point(904, 308);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(121, 23);
-            textBox3.TabIndex = 4;
+            txtColor.Location = new Point(904, 308);
+            txtColor.Name = "txtColor";
+            txtColor.Size = new Size(121, 23);
+            txtColor.TabIndex = 4;
             // 
             // label3
             // 
@@ -96,14 +96,14 @@
             label3.TabIndex = 5;
             label3.Text = "Color de Vehiculo";
             // 
-            // comboBox1
+            // cmbxCliente
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(904, 372);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 6;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmbxCliente.FormattingEnabled = true;
+            cmbxCliente.Location = new Point(904, 372);
+            cmbxCliente.Name = "cmbxCliente";
+            cmbxCliente.Size = new Size(121, 23);
+            cmbxCliente.TabIndex = 6;
+            cmbxCliente.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -116,7 +116,7 @@
             // 
             // btnRegistarVehiculo
             // 
-            btnRegistarVehiculo.Location = new Point(199, 492);
+            btnRegistarVehiculo.Location = new Point(838, 492);
             btnRegistarVehiculo.Name = "btnRegistarVehiculo";
             btnRegistarVehiculo.Size = new Size(154, 63);
             btnRegistarVehiculo.TabIndex = 8;
@@ -124,33 +124,15 @@
             btnRegistarVehiculo.UseVisualStyleBackColor = true;
             btnRegistarVehiculo.Click += btnRegistarVehiculo_Click;
             // 
-            // btnEditarVehiculo
+            // listViewVehiculos
             // 
-            btnEditarVehiculo.Location = new Point(538, 492);
-            btnEditarVehiculo.Name = "btnEditarVehiculo";
-            btnEditarVehiculo.Size = new Size(133, 63);
-            btnEditarVehiculo.TabIndex = 9;
-            btnEditarVehiculo.Text = "Editar Vehiculo";
-            btnEditarVehiculo.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarVehiculo
-            // 
-            btnEliminarVehiculo.Location = new Point(854, 492);
-            btnEliminarVehiculo.Name = "btnEliminarVehiculo";
-            btnEliminarVehiculo.Size = new Size(115, 63);
-            btnEliminarVehiculo.TabIndex = 10;
-            btnEliminarVehiculo.Text = "Eliminar Vehiculo";
-            btnEliminarVehiculo.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView1.Location = new Point(35, 115);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(636, 336);
-            listView1.TabIndex = 11;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewVehiculos.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            listViewVehiculos.Location = new Point(35, 115);
+            listViewVehiculos.Name = "listViewVehiculos";
+            listViewVehiculos.Size = new Size(636, 336);
+            listViewVehiculos.TabIndex = 11;
+            listViewVehiculos.UseCompatibleStateImageBehavior = false;
+            listViewVehiculos.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -184,7 +166,7 @@
             // 
             // btnClientes
             // 
-            btnClientes.Location = new Point(953, 45);
+            btnClientes.Location = new Point(756, 45);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(109, 63);
             btnClientes.TabIndex = 13;
@@ -192,50 +174,71 @@
             btnClientes.UseVisualStyleBackColor = true;
             btnClientes.Click += btnClientes_Click;
             // 
+            // btnVer
+            // 
+            btnVer.Location = new Point(293, 492);
+            btnVer.Name = "btnVer";
+            btnVer.Size = new Size(113, 63);
+            btnVer.TabIndex = 14;
+            btnVer.Text = "Ver Vehiculos";
+            btnVer.UseVisualStyleBackColor = true;
+            btnVer.Click += btnVer_Click;
+            // 
+            // btnVerEmpleados
+            // 
+            btnVerEmpleados.Location = new Point(916, 45);
+            btnVerEmpleados.Name = "btnVerEmpleados";
+            btnVerEmpleados.Size = new Size(109, 63);
+            btnVerEmpleados.TabIndex = 15;
+            btnVerEmpleados.Text = "Ver Empleados";
+            btnVerEmpleados.UseVisualStyleBackColor = true;
+            btnVerEmpleados.Click += btnVerEmpleados_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1171, 644);
+            Controls.Add(btnVerEmpleados);
+            Controls.Add(btnVer);
             Controls.Add(btnClientes);
             Controls.Add(label5);
-            Controls.Add(listView1);
-            Controls.Add(btnEliminarVehiculo);
-            Controls.Add(btnEditarVehiculo);
+            Controls.Add(listViewVehiculos);
             Controls.Add(btnRegistarVehiculo);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbxCliente);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(txtColor);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtVehiculo);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtPlaca);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtPlaca;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtVehiculo;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtColor;
         private Label label3;
-        private ComboBox comboBox1;
+        private ComboBox cmbxCliente;
         private Label label4;
         private Button btnRegistarVehiculo;
-        private Button btnEditarVehiculo;
-        private Button btnEliminarVehiculo;
-        private ListView listView1;
+        private ListView listViewVehiculos;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private Label label5;
         private Button btnClientes;
+        private Button btnVer;
+        private Button btnVerEmpleados;
     }
 }
