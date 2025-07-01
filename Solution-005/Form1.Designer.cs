@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             txtPlaca = new TextBox();
             label1 = new Label();
             txtVehiculo = new TextBox();
@@ -50,75 +51,83 @@
             // 
             // txtPlaca
             // 
-            txtPlaca.Location = new Point(904, 172);
+            txtPlaca.Font = new Font("Segoe UI", 10F);
+            txtPlaca.Location = new Point(944, 195);
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(121, 23);
+            txtPlaca.Size = new Size(121, 25);
             txtPlaca.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(746, 175);
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(746, 198);
             label1.Name = "label1";
-            label1.Size = new Size(99, 15);
+            label1.Size = new Size(114, 19);
             label1.TabIndex = 1;
             label1.Text = "Placa de Vehiculo";
             // 
             // txtVehiculo
             // 
-            txtVehiculo.Location = new Point(904, 227);
+            txtVehiculo.Font = new Font("Segoe UI", 10F);
+            txtVehiculo.Location = new Point(944, 257);
             txtVehiculo.Name = "txtVehiculo";
-            txtVehiculo.Size = new Size(121, 23);
+            txtVehiculo.Size = new Size(121, 25);
             txtVehiculo.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(756, 235);
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(746, 261);
             label2.Name = "label2";
-            label2.Size = new Size(94, 15);
+            label2.Size = new Size(109, 19);
             label2.TabIndex = 3;
             label2.Text = "Tipo de Vehiculo";
             // 
             // txtColor
             // 
-            txtColor.Location = new Point(904, 308);
+            txtColor.Font = new Font("Segoe UI", 10F);
+            txtColor.Location = new Point(944, 349);
             txtColor.Name = "txtColor";
-            txtColor.Size = new Size(121, 23);
+            txtColor.Size = new Size(121, 25);
             txtColor.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(748, 308);
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(748, 349);
             label3.Name = "label3";
-            label3.Size = new Size(100, 15);
+            label3.Size = new Size(116, 19);
             label3.TabIndex = 5;
             label3.Text = "Color de Vehiculo";
             // 
             // cmbxCliente
             // 
+            cmbxCliente.Font = new Font("Segoe UI", 10F);
             cmbxCliente.FormattingEnabled = true;
-            cmbxCliente.Location = new Point(904, 372);
+            cmbxCliente.Location = new Point(944, 422);
             cmbxCliente.Name = "cmbxCliente";
-            cmbxCliente.Size = new Size(121, 23);
+            cmbxCliente.Size = new Size(121, 25);
             cmbxCliente.TabIndex = 6;
             cmbxCliente.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(746, 375);
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(746, 425);
             label4.Name = "label4";
-            label4.Size = new Size(152, 15);
+            label4.Size = new Size(175, 19);
             label4.TabIndex = 7;
             label4.Text = "Selecione Cliente Frecuente";
             // 
             // btnRegistarVehiculo
             // 
-            btnRegistarVehiculo.Location = new Point(838, 492);
+            btnRegistarVehiculo.Location = new Point(517, 487);
             btnRegistarVehiculo.Name = "btnRegistarVehiculo";
-            btnRegistarVehiculo.Size = new Size(154, 63);
+            btnRegistarVehiculo.Size = new Size(154, 71);
             btnRegistarVehiculo.TabIndex = 8;
             btnRegistarVehiculo.Text = "Registar Vehiculo";
             btnRegistarVehiculo.UseVisualStyleBackColor = true;
@@ -127,9 +136,9 @@
             // listViewVehiculos
             // 
             listViewVehiculos.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listViewVehiculos.Location = new Point(35, 115);
+            listViewVehiculos.Location = new Point(35, 130);
             listViewVehiculos.Name = "listViewVehiculos";
-            listViewVehiculos.Size = new Size(636, 336);
+            listViewVehiculos.Size = new Size(636, 165);
             listViewVehiculos.TabIndex = 11;
             listViewVehiculos.UseCompatibleStateImageBehavior = false;
             listViewVehiculos.View = View.Details;
@@ -158,7 +167,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Verdana", 33F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(35, 37);
+            label5.Location = new Point(233, 23);
             label5.Name = "label5";
             label5.Size = new Size(275, 53);
             label5.TabIndex = 12;
@@ -166,9 +175,9 @@
             // 
             // btnClientes
             // 
-            btnClientes.Location = new Point(756, 45);
+            btnClientes.Location = new Point(732, 53);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(109, 63);
+            btnClientes.Size = new Size(109, 71);
             btnClientes.TabIndex = 13;
             btnClientes.Text = "Ver Clientes";
             btnClientes.UseVisualStyleBackColor = true;
@@ -176,9 +185,9 @@
             // 
             // btnVer
             // 
-            btnVer.Location = new Point(293, 492);
+            btnVer.Location = new Point(296, 322);
             btnVer.Name = "btnVer";
-            btnVer.Size = new Size(113, 63);
+            btnVer.Size = new Size(113, 71);
             btnVer.TabIndex = 14;
             btnVer.Text = "Ver Vehiculos";
             btnVer.UseVisualStyleBackColor = true;
@@ -186,9 +195,9 @@
             // 
             // btnVerEmpleados
             // 
-            btnVerEmpleados.Location = new Point(916, 45);
+            btnVerEmpleados.Location = new Point(930, 53);
             btnVerEmpleados.Name = "btnVerEmpleados";
-            btnVerEmpleados.Size = new Size(109, 63);
+            btnVerEmpleados.Size = new Size(109, 71);
             btnVerEmpleados.TabIndex = 15;
             btnVerEmpleados.Text = "Ver Empleados";
             btnVerEmpleados.UseVisualStyleBackColor = true;
@@ -196,9 +205,11 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1171, 644);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1132, 639);
             Controls.Add(btnVerEmpleados);
             Controls.Add(btnVer);
             Controls.Add(btnClientes);
@@ -213,6 +224,7 @@
             Controls.Add(txtVehiculo);
             Controls.Add(label1);
             Controls.Add(txtPlaca);
+            Font = new Font("Segoe UI", 10F);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesFrecuentes));
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -49,7 +50,7 @@
             listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             listView1.Location = new Point(95, 60);
             listView1.Name = "listView1";
-            listView1.Size = new Size(636, 336);
+            listView1.Size = new Size(636, 203);
             listView1.TabIndex = 23;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
@@ -76,7 +77,7 @@
             // 
             // btnRegistarCliente
             // 
-            btnRegistarCliente.Location = new Point(852, 470);
+            btnRegistarCliente.Location = new Point(542, 451);
             btnRegistarCliente.Name = "btnRegistarCliente";
             btnRegistarCliente.Size = new Size(154, 63);
             btnRegistarCliente.TabIndex = 20;
@@ -152,7 +153,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1172, 629);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1172, 599);
             Controls.Add(txtCorreo);
             Controls.Add(listView1);
             Controls.Add(btnRegistarCliente);

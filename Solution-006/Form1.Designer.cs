@@ -1,4 +1,4 @@
-﻿namespace Solution_006
+﻿    namespace Solution_006
 {
     partial class Form1
     {
