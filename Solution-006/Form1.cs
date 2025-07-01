@@ -11,6 +11,7 @@ namespace Solution_006
             InitializeComponent();
         }
 
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
@@ -35,6 +36,12 @@ namespace Solution_006
 
                     MessageBox.Show("Asistencia registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarAsistencias();
+                    if (cmbTipoRegistro.SelectedItem == null)
+                    {
+                        MessageBox.Show("Seleccione si es una Entrada o Salida.");
+                        return;
+                    }
+
                 }
             }
             catch (Exception ex)
@@ -46,6 +53,7 @@ namespace Solution_006
         private void btnJustificantes_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Aquí podrías abrir un nuevo formulario para visualizar o registrar justificantes.", "Info");
+
         }
 
         private void btnCalcularDescuentos_Click(object sender, EventArgs e)
